@@ -1,0 +1,9 @@
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\bin\Debug\övning  parse.exe.config
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\bin\Debug\övning  parse.exe
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\bin\Debug\övning  parse.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning  parse.csprojResolveAssemblyReference.cache
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning__parse.Form1.resources
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning__parse.Properties.Resources.resources
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning  parse.csproj.GenerateResource.Cache
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning  parse.exe
+c:\users\daniel\documents\visual studio 2013\Projects\övning  parse\övning  parse\obj\Debug\övning  parse.pdb
