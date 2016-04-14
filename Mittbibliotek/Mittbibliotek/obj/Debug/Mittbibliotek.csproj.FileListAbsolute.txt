@@ -1,0 +1,5 @@
+c:\users\daniel\documents\visual studio 2013\Projects\Mittbibliotek\Mittbibliotek\bin\Debug\Mittbibliotek.dll
+c:\users\daniel\documents\visual studio 2013\Projects\Mittbibliotek\Mittbibliotek\bin\Debug\Mittbibliotek.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\Mittbibliotek\Mittbibliotek\obj\Debug\Mittbibliotek.csprojResolveAssemblyReference.cache
+c:\users\daniel\documents\visual studio 2013\Projects\Mittbibliotek\Mittbibliotek\obj\Debug\Mittbibliotek.dll
+c:\users\daniel\documents\visual studio 2013\Projects\Mittbibliotek\Mittbibliotek\obj\Debug\Mittbibliotek.pdb
