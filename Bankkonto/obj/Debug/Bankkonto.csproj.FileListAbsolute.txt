@@ -7,3 +7,5 @@ C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\o
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\obj\Debug\Bankkonto.exe
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\obj\Debug\Bankkonto.pdb
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\obj\Debug\Bankkonto.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Bankkonto\bin\Debug\Mittbibliotek.dll
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Bankkonto\bin\Debug\Mittbibliotek.pdb

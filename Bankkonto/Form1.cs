@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Bankkonto
 {
     public partial class Form1 : Form
@@ -18,8 +19,10 @@ namespace Bankkonto
         public Form1()
         {
             InitializeComponent();
+            fildialog.DefaultExt = ".txt";
         }
         OpenFileDialog fildialog = new OpenFileDialog();
+        SaveFileDialog sparadialog = new SaveFileDialog();
 
         private void btnsätt_Click(object sender, EventArgs e)
         {
@@ -127,10 +130,10 @@ namespace Bankkonto
 
         private void btnSpara_Click(object sender, EventArgs e)
         {
-            DialogResult resultat = fildialog.ShowDialog();
+            DialogResult resultat = sparadialog.ShowDialog();
             if(resultat == DialogResult.OK)
             {
-                FileStream utström = new FileStream(fildialog.FileName, FileMode.Create, FileAccess.Write);
+                FileStream utström = new FileStream(sparadialog.FileName, FileMode.Create, FileAccess.Write);
                 StreamWriter skrivare = new StreamWriter(utström);
                 int nr = bank.konton.Antal;
                 skrivare.WriteLine(nr.ToString());

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
   public class Samling<T>
-    {
+  {
         protected int buffert;  // Storlek på buffert.
         protected T[] lista;    // Samling av element av vilken typ som helst.
         protected int längd;    // Antal tillgängliga platser.

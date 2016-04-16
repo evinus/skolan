@@ -1,0 +1,5 @@
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\bin\Release\Mittbibliotek.dll
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\bin\Release\Mittbibliotek.pdb
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.dll
+C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.pdb
