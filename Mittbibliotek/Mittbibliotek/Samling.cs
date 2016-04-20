@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 
-  public class Samling<T>
+public class Samling<T> :  IEnumerable<T>
   {
         protected int buffert;  // Storlek på buffert.
         protected T[] lista;    // Samling av element av vilken typ som helst.
@@ -19,7 +20,7 @@ using System.Threading.Tasks;
             längd = 30;
             lista = new T[längd];
         }
-
+    
         protected void Expandera(int storlek)
         {
             if (storlek < 1) return;
@@ -75,7 +76,10 @@ using System.Threading.Tasks;
         {
             get { return antal; }
         }
-        public T ElementFrån(int index)
+
+  
+
+    public T ElementFrån(int index)
         {
             return lista[index];
         }
@@ -114,7 +118,64 @@ using System.Threading.Tasks;
             längd = 30;
             lista = new T[längd];
         }
-        public T this[int index]
+    
+    /// <summary>
+    /// Returnerar fösta halvan av samlingen.
+    /// </summary>
+    /// <param name="samling"></param>
+    public virtual void Förstahalvan(Samling<T> samling)
+    {
+        for(int i =0;i< Antal/2;i++)
+        {
+            LäggTill(samling.ElementFrån(i));
+        }
+    }
+
+    public void Dispose()
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool MoveNext()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Reset()
+    {
+        throw new NotImplementedException();
+    }
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
+    public void KopieraTill(T[] uppställning)
+    {
+        for(int i =0;i<Antal;i++)
+        {
+            uppställning[i] = lista[i];
+        }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="uppställning"></param>
+    /// <param name="startIndex">Skriv nummret som den ska starta på, kom ihåg index startar på talet 0</param>
+    public void KopieraTill(T[] uppställning, int startIndex)
+    {
+        for (int i = startIndex; i < Antal; i++)
+        {
+            uppställning[i] = lista[i];
+        }
+    }
+
+    public T this[int index]
         {
             get { return lista[index]; }
         }
@@ -122,7 +183,7 @@ using System.Threading.Tasks;
     public class Mängd <T>:Samling<T>
     {
         /// <summary>
-        /// test
+        /// Lägg till ett obejct till din mängd
         /// </summary>
         /// <param name="e"></param>
         public override void LäggTill(T e)
