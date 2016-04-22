@@ -1,0 +1,8 @@
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Release\SägHej.exe.config
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Release\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Release\SägHej.pdb
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Release\SägHej.KlientForm.resources
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Release\SägHej.Properties.Resources.resources
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Release\Klient.csproj.GenerateResource.Cache
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Release\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Release\SägHej.pdb

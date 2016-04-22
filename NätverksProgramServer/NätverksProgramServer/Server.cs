@@ -19,6 +19,7 @@ namespace NätverksProgramServer
         TcpListener lyssnare;
         IPAddress hostAdress;
         List<int> tal = new List<int>();
+        List<byte> filData = new List<byte>();
         public Server()
         {
             InitializeComponent();
@@ -41,7 +42,25 @@ namespace NätverksProgramServer
         }
         public async void Lyssna(TcpClient client)
         {
-
+            byte[] buffer;
+            byte[] nr = new byte[1];
+            int n = 0;
+            try
+            {
+                n = await client.GetStream().ReadAsync(nr, 0, 1);
+                buffer = new byte[n];
+                await client.GetStream().ReadAsync(buffer, 0, n);
+                foreach(TcpClient k in klienter)
+                {
+                    if (k == client) continue;
+                    await k.GetStream().WriteAsync(nr, 0, 1);
+                    await k.GetStream().WriteAsync(buffer, 0, n);
+                }
+            }
+            catch(Exception error)
+            {
+                tbxLogg.AppendText(DateTime.Now.ToString("h:mm:ss tt") + error.Message + "\r\n");
+            }
         }
     }
 }

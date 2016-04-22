@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tbxLogg = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // tbxLogg
+            // 
+            this.tbxLogg.Location = new System.Drawing.Point(13, 13);
+            this.tbxLogg.Multiline = true;
+            this.tbxLogg.Name = "tbxLogg";
+            this.tbxLogg.Size = new System.Drawing.Size(264, 599);
+            this.tbxLogg.TabIndex = 0;
+            // 
+            // Server
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(289, 624);
+            this.Controls.Add(this.tbxLogg);
+            this.Name = "Server";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox tbxLogg;
     }
 }
 

@@ -1,0 +1,32 @@
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Debug\SägHej.exe.config
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Debug\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\bin\Debug\SägHej.pdb
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Debug\SägHej.Properties.Resources.resources
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Debug\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Debug\SägHej.pdb
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCP\Klient\obj\Debug\SägHej.KlientForm.resources
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.pdb
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\bin\Debug\SägHej.exe
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\bin\Debug\SägHej.pdb
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.KlientForm.resources
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.Properties.Resources.resources
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.exe
+C:\Clouds\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\Klient.csprojResolveAssemblyReference.cache
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\bin\Debug\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\bin\Debug\SägHej.pdb
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\Klient.csprojResolveAssemblyReference.cache
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.KlientForm.resources
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.Properties.Resources.resources
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.exe
+C:\Dropbox\Skola\Dokument\• Teknikspecialisering\ProjektfilerVS\ExempelTCPAsync\Klient\obj\Debug\SägHej.pdb
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\SägHej.exe
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\SägHej.pdb
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\bin\Debug\SägHej.exe
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\bin\Debug\SägHej.pdb
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\Klient.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\SägHej.KlientForm.resources
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\SägHej.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\skolan\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
