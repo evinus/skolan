@@ -48,11 +48,11 @@ namespace NätverksKlient
                 if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     byte[] filData = System.IO.File.ReadAllBytes(openFileDialog1.FileName);
-                    byte[] nr = new byte[1];
-                    nr[0] = (byte)filData.Length;
+                    
+                    byte[] nr = BitConverter.GetBytes(filData.Length);
                     try
                     {
-                        await klient.GetStream().WriteAsync(nr, 0, 1);
+                        await klient.GetStream().WriteAsync(nr, 0, nr.Length);
                         await klient.GetStream().WriteAsync(filData, 0, filData.Length);
                     }
                     catch (Exception error) { MessageBox.Show(error.Message, "Klientfel"); return; }
@@ -62,10 +62,31 @@ namespace NätverksKlient
         public async void Lyssna()
         {
             
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                FileStream utström = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write);
-            }
+                try
+                {
+                    byte[] buffer;
+                    byte[] nr = new byte[4];
+                    
+                    int n = await klient.GetStream().ReadAsync(nr, 0, 4);
+                    MessageBox.Show("har börjat ta emot filen");
+                   int filstorlek = BitConverter.ToInt32(nr, 0);
+                   buffer = new byte[filstorlek];
+                    await klient.GetStream().ReadAsync(buffer, 0, filstorlek);
+                    MessageBox.Show("har tagit emot filen");
+                    //await utström.WriteAsync(buffer, 1, n);
+                    //StreamWriter  skrivare = new StreamWriter(utström);
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        
+                        File.WriteAllBytes(saveFileDialog1.FileName, buffer);
+                    }
+
+                }
+                catch
+                {
+
+                }
+                Lyssna();
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
