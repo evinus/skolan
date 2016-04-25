@@ -36,6 +36,7 @@
             this.tbxport = new System.Windows.Forms.TextBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnSendFile = new System.Windows.Forms.Button();
+            this.btnTaEmot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -94,11 +95,22 @@
             this.btnSendFile.UseVisualStyleBackColor = true;
             this.btnSendFile.Click += new System.EventHandler(this.btnSendFile_Click);
             // 
+            // btnTaEmot
+            // 
+            this.btnTaEmot.Location = new System.Drawing.Point(13, 211);
+            this.btnTaEmot.Name = "btnTaEmot";
+            this.btnTaEmot.Size = new System.Drawing.Size(103, 36);
+            this.btnTaEmot.TabIndex = 6;
+            this.btnTaEmot.Text = "Ta Emot";
+            this.btnTaEmot.UseVisualStyleBackColor = true;
+            this.btnTaEmot.Click += new System.EventHandler(this.btnTaEmot_Click);
+            // 
             // Klient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 304);
+            this.Controls.Add(this.btnTaEmot);
             this.Controls.Add(this.btnSendFile);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.tbxport);
@@ -123,6 +135,7 @@
         private System.Windows.Forms.TextBox tbxport;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnSendFile;
+        private System.Windows.Forms.Button btnTaEmot;
     }
 }
 

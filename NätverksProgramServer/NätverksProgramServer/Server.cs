@@ -34,7 +34,7 @@ namespace NätverksProgramServer
             {
                TcpClient klient = await lyssnare.AcceptTcpClientAsync();
                klienter.Add(klient);
-               tbxLogg.AppendText((klient.Client.RemoteEndPoint as IPEndPoint).Address.ToString());
+               tbxLogg.AppendText(DateTime.Now.ToString("h:mm:ss tt") + ": " + (klient.Client.RemoteEndPoint as IPEndPoint).Address.ToString() + " Har anslutet \r\n");
                Lyssna(klient);
             }
             catch(Exception error)
@@ -47,10 +47,12 @@ namespace NätverksProgramServer
         public async void Lyssna(TcpClient client)
         {
             byte[] buffer;
-            byte[] nr = new byte[4];
+            byte[] nr = new byte[1024];
+            byte[] namn = new byte[1024];
             int n = 0;
             try
             {
+               await client.GetStream().ReadAsync(namn, 0, 1024);
                 n = await client.GetStream().ReadAsync(nr, 0, 4);
                 int filStorlek = BitConverter.ToInt32(nr, 0);
                 tbxLogg.AppendText("\r\n har fått storleken " + filStorlek.ToString());
@@ -59,10 +61,13 @@ namespace NätverksProgramServer
                 tbxLogg.AppendText("\r\n Ska börja skicka filen");
                 foreach(TcpClient k in klienter)
                 {
-                   // if (k == client) continue;
-                   await  k.GetStream().WriteAsync(nr, 0, 4);
-                    await k.GetStream().WriteAsync(buffer, 0, filStorlek);
+                   if (k == client) continue;
+                        await k.GetStream().WriteAsync(namn, 0, 1024);
+                       await  k.GetStream().WriteAsync(nr, 0, 4);
+                        await k.GetStream().WriteAsync(buffer, 0, filStorlek);
+                    
                 }
+
             }
             catch(Exception error)
             {
