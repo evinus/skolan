@@ -49,7 +49,7 @@ namespace NätverksKlient
             if ( klient.Connected )
             {
                 NetworkStream nätström = klient.GetStream();
-                nätström.
+                
                 if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     byte[] filData = System.IO.File.ReadAllBytes(openFileDialog1.FileName);
@@ -79,28 +79,27 @@ namespace NätverksKlient
                 {
                     byte[] buffer;
                     byte[] nr = new byte[4];
-                byte[] testData = new byte[1024];
+                    byte[] namn = new byte[1024];
 
-                await klient.GetStream().ReadAsync(testData, 0, testData.Length);
-                int n = await klient.GetStream().ReadAsync(nr, 0, 4);
+                    await klient.GetStream().ReadAsync(namn, 0, namn.Length);
+                    int n = await klient.GetStream().ReadAsync(nr, 0, 4);
                 
-                string namn = Encoding.Unicode.GetString(testData, 0, testData.Length);
-                int filstorlek = BitConverter.ToInt32(nr, 0);
-                buffer = new byte[filstorlek];
+                    string strängNamn = Encoding.Unicode.GetString(namn, 0, namn.Length);
+                    int filstorlek = BitConverter.ToInt32(nr, 0);
+                    buffer = new byte[filstorlek];
 
-                await klient.GetStream().ReadAsync(buffer, 0, filstorlek);
-                DialogResult resultat = MessageBox.Show("Inkommande fil, Vill du ladda ner det?", "Ladda ner?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    await klient.GetStream().ReadAsync(buffer, 0, filstorlek);
+                    DialogResult resultat = MessageBox.Show("Inkommande fil, Vill du ladda ner det?", "Ladda ner?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (resultat == DialogResult.Yes)
-                {
-                    saveFileDialog1.FileName = namn;
-                    //await utström.WriteAsync(buffer, 1, n);
-                    //StreamWriter  skrivare = new StreamWriter(utström);
-                   if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    if (resultat == DialogResult.Yes)
                     {
-                        
-                        File.WriteAllBytes(saveFileDialog1.FileName, buffer);
-                    }
+                        saveFileDialog1.FileName = strängNamn;
+                        //await utström.WriteAsync(buffer, 1, n);
+                        //StreamWriter  skrivare = new StreamWriter(utström);
+                        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                        {                       
+                            File.WriteAllBytes(saveFileDialog1.FileName, buffer);
+                        }
                 }
                 
                 }
@@ -108,7 +107,8 @@ namespace NätverksKlient
                 {
                 MessageBox.Show(error.Message);
                 }
-            btnTaEmot.Enabled = true;
+                Lyssna();
+                //btnTaEmot.Enabled = true;
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -130,8 +130,8 @@ namespace NätverksKlient
 
         private void btnTaEmot_Click(object sender, EventArgs e)
         {
-            Lyssna();
             btnTaEmot.Enabled = false;
+            Lyssna(); 
         }
     }
 }

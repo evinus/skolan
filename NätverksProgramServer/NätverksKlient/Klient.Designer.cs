@@ -97,6 +97,7 @@
             // 
             // btnTaEmot
             // 
+            this.btnTaEmot.Enabled = false;
             this.btnTaEmot.Location = new System.Drawing.Point(13, 211);
             this.btnTaEmot.Name = "btnTaEmot";
             this.btnTaEmot.Size = new System.Drawing.Size(103, 36);

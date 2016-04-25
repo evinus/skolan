@@ -52,13 +52,18 @@ namespace NätverksProgramServer
             int n = 0;
             try
             {
-               await client.GetStream().ReadAsync(namn, 0, 1024);
+                //Läser in namnet
+                await client.GetStream().ReadAsync(namn, 0, 1024);
+                //läser in längden
                 n = await client.GetStream().ReadAsync(nr, 0, 4);
                 int filStorlek = BitConverter.ToInt32(nr, 0);
                 tbxLogg.AppendText("\r\n har fått storleken " + filStorlek.ToString());
                 buffer = new byte[filStorlek];
+                //Läser in filen
                 await client.GetStream().ReadAsync(buffer, 0, filStorlek);
                 tbxLogg.AppendText("\r\n Ska börja skicka filen");
+
+                //SKickar ut filen till alla klienter
                 foreach(TcpClient k in klienter)
                 {
                    if (k == client) continue;
