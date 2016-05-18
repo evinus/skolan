@@ -47,6 +47,7 @@
             this.Controls.Add(this.tbxLogg);
             this.Name = "Server";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Server_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

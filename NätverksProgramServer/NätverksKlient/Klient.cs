@@ -16,22 +16,24 @@ namespace NätverksKlient
     public partial class Klient : Form
     {
         TcpClient klient = new TcpClient();
+        
+
         public Klient()
         {
             InitializeComponent();
-            klient.NoDelay = true;
+            
             btnSendFile.Enabled = false;
             btnTaEmot.Enabled = false;
+            klient.NoDelay = false;
         }
        
         public async void Connect()
         {
             IPAddress adress = IPAddress.Parse(tbxIP.Text);
-            int port = int.Parse(tbxport.Text);
 
             try
             {
-                await klient.ConnectAsync(adress, port);
+                await klient.ConnectAsync(adress, 12345);
             }
             catch (Exception error)
             {
@@ -47,73 +49,106 @@ namespace NätverksKlient
          public async void StartSending ( )
         {
             if ( klient.Connected )
-            {
-                NetworkStream nätström = klient.GetStream();
-                
+            { 
+                  
                 if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     byte[] filData = System.IO.File.ReadAllBytes(openFileDialog1.FileName);
-                    
+                    byte[] tal = BitConverter.GetBytes(1);
                     byte[] nr = BitConverter.GetBytes(filData.Length);
-                    byte[] testData = new byte[3];
-                    testData[0] = 1;
-                    testData[1] = 2;
-                    testData[2] = 3;
-                string message = "nämen tjena";
-                byte[] utData = Encoding.Unicode.GetBytes(openFileDialog1.FileName);
+                
                 try
                     {
-                        await klient.GetStream().WriteAsync(utData, 0, utData.Length);
-                        await klient.GetStream().WriteAsync(nr, 0, nr.Length);
+                        await klient.GetStream().WriteAsync(tal, 0, 4);    
+
+                        await klient.GetStream().WriteAsync(nr, 0, 4);
+                                            
                         await klient.GetStream().WriteAsync(filData, 0, filData.Length);
-                        
+                          
                     }
                     catch (Exception error) { MessageBox.Show(error.Message, "Klientfel"); return; }
                 }
             }
         }
-        public async void Lyssna()
+         public async void Lyssna()
+         {
+             
+             byte[] bufferTemp = new byte[1024];
+             byte[] buffer = null;
+             byte[] nr = new byte[4];
+             byte[] meddelande = new byte[200];
+             List<byte> filen = new List<byte>();
+             int antalMottagnaByte = 0;
+             int filstorlek = 0;
+             int tal;
+             try
+             { 
+                 // tar emot ett tal som har skckats för att om det är en fil eller ett meddelande
+                 byte[] talb = new byte[4];
+                 await klient.GetStream().ReadAsync(talb, 0, 4);
+                 tal = BitConverter.ToInt32(talb, 0);
+                 if (tal == 1) // om det är en fil
+                 {
+                     //tar emot filstorleken
+                     int n = await klient.GetStream().ReadAsync(nr, 0, 4);
+                     filstorlek = BitConverter.ToInt32(nr, 0);
+                     buffer = new byte[filstorlek];
+
+                     //tar emot filen, är den stor, gör vi det i flera steg.
+                     while (klient.Available > 0)
+                     {
+                         antalMottagnaByte += await klient.GetStream().ReadAsync(buffer, antalMottagnaByte, klient.Available);
+                     }
+
+                     DialogResult resultat = MessageBox.Show("Inkommande fil, Vill du ladda ner det?", "Ladda ner?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                     if (resultat == DialogResult.Yes)
+                     {
+                         if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                         {
+                             //spara filen
+                             File.WriteAllBytes(saveFileDialog1.FileName, buffer);
+                         }
+                     }
+                 }
+                 if (tal == 2) //Är det ett meddelande skriver vi ut den.
+                 {
+                     await klient.GetStream().ReadAsync(meddelande, 0, 200);
+                     string meddeland = Encoding.Unicode.GetString(meddelande);
+                     tbxLogg.AppendText("\r\n" + meddeland);
+                 }
+             }
+             catch (Exception error) // Blir det fel skriv ut saker om felet.
+             {
+                 string bufferinfo = "Buffert: " + ((buffer == null) ? "Buffer ej skapad" : buffer.Length.ToString());
+                 MessageBox.Show(error.Message + " Antalmotagnabytes " + antalMottagnaByte.ToString() + ", bufferstorleken " + bufferinfo + ", filstorlek: " + filstorlek.ToString());
+                 return;
+             }
+             Lyssna();
+         }
+        public async void Skickameddelande (string meddelande)
         {
-            
-                try
-                {
-                    byte[] buffer;
-                    byte[] nr = new byte[4];
-                    byte[] namn = new byte[1024];
+            try
+            {
+                //gör om talet 2 till bytes och skickar det
+                byte[] tal = BitConverter.GetBytes(2);
+                await klient.GetStream().WriteAsync(tal, 0, 4);
+                //gör om meddelandet till bytes och skickar det
+                byte[] medel = Encoding.Unicode.GetBytes(meddelande);
+                await klient.GetStream().WriteAsync(medel, 0, medel.Length);
 
-                    await klient.GetStream().ReadAsync(namn, 0, namn.Length);
-                    int n = await klient.GetStream().ReadAsync(nr, 0, 4);
-                
-                    string strängNamn = Encoding.Unicode.GetString(namn, 0, namn.Length);
-                    int filstorlek = BitConverter.ToInt32(nr, 0);
-                    buffer = new byte[filstorlek];
-
-                    await klient.GetStream().ReadAsync(buffer, 0, filstorlek);
-                    DialogResult resultat = MessageBox.Show("Inkommande fil, Vill du ladda ner det?", "Ladda ner?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (resultat == DialogResult.Yes)
-                    {
-                        saveFileDialog1.FileName = strängNamn;
-                        //await utström.WriteAsync(buffer, 1, n);
-                        //StreamWriter  skrivare = new StreamWriter(utström);
-                        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                        {                       
-                            File.WriteAllBytes(saveFileDialog1.FileName, buffer);
-                        }
-                }
-                
-                }
-                catch(Exception error)
-                {
+            }
+            catch(Exception error)//blir det fel
+            {
                 MessageBox.Show(error.Message);
-                }
-                Lyssna();
-                //btnTaEmot.Enabled = true;
+                return;
+            }
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if (!klient.Connected) Connect();
+            if (!Användare.klient.Connected) //Användare.Connect(tbxIP.Text, int.Parse(tbxport.Text), tbxNamn.Text);
+                Connect();
         }
 
         private void btnSendFile_Click(object sender, EventArgs e)
@@ -133,5 +168,22 @@ namespace NätverksKlient
             btnTaEmot.Enabled = false;
             Lyssna(); 
         }
+
+        private void btnSkicka_Click(object sender, EventArgs e)
+        {
+            Skickameddelande(tbxMeddelande.Text);
+        }
+
+        private void Klient_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = false;
+                Skickameddelande(tbxMeddelande.Text);
+            }
+        }
+
+        
     }
 }

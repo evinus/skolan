@@ -37,6 +37,11 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnSendFile = new System.Windows.Forms.Button();
             this.btnTaEmot = new System.Windows.Forms.Button();
+            this.tbxLogg = new System.Windows.Forms.TextBox();
+            this.tbxMeddelande = new System.Windows.Forms.TextBox();
+            this.btnSkicka = new System.Windows.Forms.Button();
+            this.tbxNamn = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -49,6 +54,7 @@
             this.tbxIP.Name = "tbxIP";
             this.tbxIP.Size = new System.Drawing.Size(100, 20);
             this.tbxIP.TabIndex = 0;
+            this.tbxIP.Text = "127.0.0.1";
             // 
             // label1
             // 
@@ -70,10 +76,12 @@
             // 
             // tbxport
             // 
+            this.tbxport.Enabled = false;
             this.tbxport.Location = new System.Drawing.Point(87, 78);
             this.tbxport.Name = "tbxport";
             this.tbxport.Size = new System.Drawing.Size(100, 20);
             this.tbxport.TabIndex = 3;
+            this.tbxport.Text = "12345";
             // 
             // btnConnect
             // 
@@ -106,11 +114,58 @@
             this.btnTaEmot.UseVisualStyleBackColor = true;
             this.btnTaEmot.Click += new System.EventHandler(this.btnTaEmot_Click);
             // 
+            // tbxLogg
+            // 
+            this.tbxLogg.Location = new System.Drawing.Point(397, 13);
+            this.tbxLogg.Multiline = true;
+            this.tbxLogg.Name = "tbxLogg";
+            this.tbxLogg.Size = new System.Drawing.Size(331, 133);
+            this.tbxLogg.TabIndex = 7;
+            // 
+            // tbxMeddelande
+            // 
+            this.tbxMeddelande.Location = new System.Drawing.Point(397, 189);
+            this.tbxMeddelande.Name = "tbxMeddelande";
+            this.tbxMeddelande.Size = new System.Drawing.Size(248, 20);
+            this.tbxMeddelande.TabIndex = 8;
+            // 
+            // btnSkicka
+            // 
+            this.btnSkicka.Location = new System.Drawing.Point(652, 189);
+            this.btnSkicka.Name = "btnSkicka";
+            this.btnSkicka.Size = new System.Drawing.Size(76, 58);
+            this.btnSkicka.TabIndex = 9;
+            this.btnSkicka.Text = "Skicka";
+            this.btnSkicka.UseVisualStyleBackColor = true;
+            this.btnSkicka.Click += new System.EventHandler(this.btnSkicka_Click);
+            // 
+            // tbxNamn
+            // 
+            this.tbxNamn.Location = new System.Drawing.Point(266, 44);
+            this.tbxNamn.Name = "tbxNamn";
+            this.tbxNamn.Size = new System.Drawing.Size(100, 20);
+            this.tbxNamn.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(206, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Namn";
+            // 
             // Klient
             // 
+            this.AcceptButton = this.btnSkicka;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 304);
+            this.ClientSize = new System.Drawing.Size(740, 305);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tbxNamn);
+            this.Controls.Add(this.btnSkicka);
+            this.Controls.Add(this.tbxMeddelande);
+            this.Controls.Add(this.tbxLogg);
             this.Controls.Add(this.btnTaEmot);
             this.Controls.Add(this.btnSendFile);
             this.Controls.Add(this.btnConnect);
@@ -121,6 +176,7 @@
             this.Name = "Klient";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Klient_FormClosing);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Klient_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +193,11 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnSendFile;
         private System.Windows.Forms.Button btnTaEmot;
+        private System.Windows.Forms.TextBox tbxLogg;
+        private System.Windows.Forms.TextBox tbxMeddelande;
+        private System.Windows.Forms.Button btnSkicka;
+        private System.Windows.Forms.TextBox tbxNamn;
+        private System.Windows.Forms.Label label3;
     }
 }
 
