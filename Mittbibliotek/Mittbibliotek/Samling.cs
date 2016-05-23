@@ -12,7 +12,7 @@ public class Samling<T> :  IEnumerable<T>
         protected T[] lista;    // Samling av element av vilken typ som helst.
         protected int längd;    // Antal tillgängliga platser.
         protected int antal;    // Antal använda platser.
-
+    
         public Samling()
         {
             buffert = 30;
@@ -87,7 +87,9 @@ public class Samling<T> :  IEnumerable<T>
 
     public T ElementFrån(int index)
         {
-            return lista[index];
+            if (index < antal)
+                return lista[index];
+            else throw new IndexOutOfRangeException();
         }
         public bool Har(T värde)
         {
@@ -129,12 +131,18 @@ public class Samling<T> :  IEnumerable<T>
     /// Lägger till fösta halvan av samlingen.
     /// </summary>
     /// <param name="samling"></param>
-    public virtual void Förstahalvan(Samling<T> samling)
+    public virtual T[] Förstahalvan(Samling<T> samling)
     {
+        T[] array = new T[Antal/2];
         for(int i =0;i< Antal/2;i++)
         {
-            LäggTill(samling.ElementFrån(i));
+            array[i] = lista[i];
         }
+        return array;
+    }
+    public T[] TillFält()
+    {
+        return lista;
     }
 
     public int Binärsökning(int i)

@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KundKorg", "KundKorg\KundKo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kontroller", "kontroller\kontroller.csproj", "{E3C692CC-50BC-41AD-A9EA-715385953C36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ränta", "Ränta\Ränta.csproj", "{DE14D2C8-096C-408A-A308-74254A604B7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{E3C692CC-50BC-41AD-A9EA-715385953C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3C692CC-50BC-41AD-A9EA-715385953C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3C692CC-50BC-41AD-A9EA-715385953C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE14D2C8-096C-408A-A308-74254A604B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE14D2C8-096C-408A-A308-74254A604B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE14D2C8-096C-408A-A308-74254A604B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE14D2C8-096C-408A-A308-74254A604B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
