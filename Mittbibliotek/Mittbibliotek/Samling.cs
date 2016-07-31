@@ -20,6 +20,12 @@ public class Samling<T> :  IEnumerable<T>
             längd = 30;
             lista = new T[längd];
         }
+
+        public int Buffert
+    {
+        get { return buffert; }
+        set { buffert = value; }
+    }
     
         protected void Expandera(int storlek)
         {
@@ -120,7 +126,7 @@ public class Samling<T> :  IEnumerable<T>
         }
     
     /// <summary>
-    /// Returnerar fösta halvan av samlingen.
+    /// Lägger till fösta halvan av samlingen.
     /// </summary>
     /// <param name="samling"></param>
     public virtual void Förstahalvan(Samling<T> samling)
@@ -129,6 +135,27 @@ public class Samling<T> :  IEnumerable<T>
         {
             LäggTill(samling.ElementFrån(i));
         }
+    }
+
+    public int Binärsökning(int i)
+    {
+        if (typeof(T) == typeof(int))
+        {
+            Array.Sort(lista, 0, Antal);
+            int minsta = 0;
+            int högsta = Antal;
+            int mitt;
+            int position = -1;
+            do
+            {
+                mitt = (minsta + högsta + 1) / 2;
+                if (lista[mitt] == i)
+                { }
+
+        }
+            while (minsta <= högsta && (position == -1));
+        }
+        return -1;
     }
 
     public void Dispose()
