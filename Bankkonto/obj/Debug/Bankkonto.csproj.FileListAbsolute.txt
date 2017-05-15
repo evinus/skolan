@@ -9,3 +9,14 @@ C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\o
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Bankkonto\obj\Debug\Bankkonto.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Bankkonto\bin\Debug\Mittbibliotek.dll
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Bankkonto\bin\Debug\Mittbibliotek.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\bin\Debug\Bankkonto.exe.config
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.exe
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\bin\Debug\Bankkonto.exe
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\bin\Debug\Bankkonto.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\bin\Debug\Mittbibliotek.dll
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\bin\Debug\Mittbibliotek.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.csprojResolveAssemblyReference.cache
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.Form1.resources
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.Properties.Resources.resources
+F:\Users\Daniel\Dokument\GitHub\skolan\Bankkonto\obj\Debug\Bankkonto.csproj.GenerateResource.Cache

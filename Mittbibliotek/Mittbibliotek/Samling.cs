@@ -147,23 +147,25 @@ public class Samling<T> :  IEnumerable<T>
 
     public int Binärsökning(int i)
     {
+        int position = -1;
         if (typeof(T) == typeof(int))
         {
             Array.Sort(lista, 0, Antal);
             int minsta = 0;
             int högsta = Antal;
             int mitt;
-            int position = -1;
+            
             do
             {
                 mitt = (minsta + högsta + 1) / 2;
-                if (lista[mitt] == i)
-                { }
-
-        }
+                int t = Convert.ToInt16(lista[mitt]);
+                if (t == i)     position = i;
+                else if (i < t) högsta = mitt - 1;
+                else            minsta = mitt + 1;
+            }
             while (minsta <= högsta && (position == -1));
         }
-        return -1;
+        return position;
     }
 
     public void Dispose()
@@ -253,6 +255,7 @@ public class Samling<T> :  IEnumerable<T>
         public void Sortera ( )
         {
             Array.Sort(lista,0, antal );
+        
 
             /*int i = 0, j;
             int n = antal;

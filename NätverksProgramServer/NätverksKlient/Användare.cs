@@ -46,6 +46,11 @@ public static class Användare
             return;
         }
     }
+    public static async void Lyssna()
+    {
+        int tal;
+        
+    }
 
 }
 

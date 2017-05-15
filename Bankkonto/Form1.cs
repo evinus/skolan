@@ -35,7 +35,7 @@ namespace Bankkonto
                     uppdatera();
                 }
                 else
-                    MessageBox.Show("skrinv in personnumer");
+                    MessageBox.Show("skriv in personnumer");
             }
         }
         private void btnUT_Click(object sender, EventArgs e)

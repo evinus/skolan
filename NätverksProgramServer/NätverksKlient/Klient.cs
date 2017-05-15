@@ -184,6 +184,11 @@ namespace NätverksKlient
             }
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 m = new Form1();
+            m.Show();
+            
+        }
     }
 }

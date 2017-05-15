@@ -16,3 +16,4 @@ C:\Users\Daniel\Documents\GitHub\skolan\NätverksProgramServer\NätverksKlient\o
 C:\Users\Daniel\Documents\GitHub\skolan\NätverksProgramServer\NätverksKlient\obj\Debug\NätverksKlient.csproj.GenerateResource.Cache
 C:\Users\Daniel\Documents\GitHub\skolan\NätverksProgramServer\NätverksKlient\obj\Debug\NätverksKlient.exe
 C:\Users\Daniel\Documents\GitHub\skolan\NätverksProgramServer\NätverksKlient\obj\Debug\NätverksKlient.pdb
+C:\Users\Daniel\Documents\GitHub\skolan\NätverksProgramServer\NätverksKlient\obj\Debug\NätverksKlient.Form1.resources

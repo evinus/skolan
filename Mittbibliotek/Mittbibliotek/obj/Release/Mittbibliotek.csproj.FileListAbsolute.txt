@@ -3,3 +3,8 @@ C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliot
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.dll
 C:\Users\Daniel\Documents\Visual Studio 2013\Projects\övning  parse\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Mittbibliotek\Mittbibliotek\bin\Release\Mittbibliotek.dll
+F:\Users\Daniel\Dokument\GitHub\skolan\Mittbibliotek\Mittbibliotek\bin\Release\Mittbibliotek.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.csprojResolveAssemblyReference.cache
+F:\Users\Daniel\Dokument\GitHub\skolan\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.dll
+F:\Users\Daniel\Dokument\GitHub\skolan\Mittbibliotek\Mittbibliotek\obj\Release\Mittbibliotek.pdb
