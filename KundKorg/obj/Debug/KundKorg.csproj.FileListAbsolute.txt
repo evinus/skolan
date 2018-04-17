@@ -7,3 +7,6 @@ C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\KundKorg\ob
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\KundKorg\obj\Debug\KundKorg.exe
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\KundKorg\obj\Debug\KundKorg.pdb
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\KundKorg\obj\Debug\KundKorg.csprojResolveAssemblyReference.cache
+F:\Users\Daniel\Dokument\GitHub\skolan\KundKorg\bin\Debug\KundKorg.exe.config
+F:\Users\Daniel\Dokument\GitHub\skolan\KundKorg\obj\Debug\KundKorg.exe
+F:\Users\Daniel\Dokument\GitHub\skolan\KundKorg\obj\Debug\KundKorg.pdb

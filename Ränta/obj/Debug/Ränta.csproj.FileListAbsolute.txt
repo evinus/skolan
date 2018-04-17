@@ -7,3 +7,6 @@ C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Ränta\obj\
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Ränta\obj\Debug\Ränta.csproj.GenerateResource.Cache
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Ränta\obj\Debug\Ränta.exe
 C:\Users\Daniel\documents\visual studio 2013\Projects\övning  parse\Ränta\obj\Debug\Ränta.pdb
+F:\Users\Daniel\Dokument\GitHub\skolan\Ränta\bin\Debug\Ränta.exe.config
+F:\Users\Daniel\Dokument\GitHub\skolan\Ränta\obj\Debug\Ränta.exe
+F:\Users\Daniel\Dokument\GitHub\skolan\Ränta\obj\Debug\Ränta.pdb
